@@ -21,15 +21,13 @@
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="msapplication-TileImage" content="{{ asset('admin/assets/favicon/ms-icon-144x144.png') }}">
         <meta name="theme-color" content="#ffffff">
-        <link href="{{ asset('admin/css/free.min.css') }}" rel="stylesheet">
         <link href="{{ asset('admin/css/style.css') }}" rel="stylesheet">
         @yield('styles')
     </head>
     <body class="c-app">
-        <div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
-            @include('admin::layouts.nav')
+        @include('admin::layouts.nav')
+        <div class="c-wrapper c-fixed-components">
             @include('admin::layouts.header')
-
             <div class="c-body">
                 <main class="c-main">
                     @yield('content')
@@ -40,6 +38,9 @@
 
         <!-- CoreUI and necessary plugins-->
         <script src="{{ asset('admin/js/coreui.bundle.min.js') }}"></script>
+        <!--[if IE]><!-->
+        <script src="{{ asset('admin/js/svgxuse.min.js') }}"></script>
+        <!--<![endif]-->
         <script src="{{ asset('admin/js/coreui-utils.js') }}"></script>
         @yield('scripts')
     </body>

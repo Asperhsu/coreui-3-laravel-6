@@ -1,5 +1,7 @@
 @extends('admin::layouts.master')
 
 @section('content')
-    Hello World!
+    <div class="container-fluid">
+        Hello World!
+    </div>
 @endsection
